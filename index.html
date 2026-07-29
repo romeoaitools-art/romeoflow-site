@@ -3,6 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="googlea4a5c6b72cc67730" />
+<!-- Google tag (gtag.js) — le script externe n'est chargé qu'après consentement cookies (voir bannière + script en bas de page) -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  window.rfGaId = 'G-Q8HVMZJQQ2';
+  window.rfLoadGA = function(){
+    if (window.rfGaLoaded) return;
+    window.rfGaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.rfGaId;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', window.rfGaId, { anonymize_ip: true });
+  };
+</script>
 <title>Romeo.Flow — Automatisation IA pour l'immobilier</title>
 <meta name="description" content="Nous concevons des systèmes d'automatisation IA sur mesure pour les professionnels de l'immobilier : réceptionniste IA, qualification de leads, automatisation CRM, conciergerie Airbnb. Accompagnement à distance, partout dans le monde francophone. Audit gratuit." />
 <meta property="og:title" content="Romeo.Flow — Automatisation IA pour l'immobilier" />
@@ -70,6 +87,7 @@ sc-if.rf-open{display:contents}
 .rf-hv20:hover{color: #C9A84C;}
 .rf-hv21:hover{color: #C9A84C;}
 .rf-hv22:hover{color: #C9A84C;}
+.rf-hv22b:hover{color: #C9A84C;}
 .rf-hv23:hover{border-color: #C9A84C;}
 .rf-hv24:hover{border-color: #C9A84C;}
 .rf-hv25:hover{color: #C9A84C;}
@@ -777,6 +795,7 @@ sc-if.rf-open{display:contents}
     <nav aria-label="Informations légales" style="display: grid; gap: 11px;">
       <a href="#mentions-legales" data-action="openLegal" style="font-size: 0.9rem; color: rgba(245,241,232,0.82);" class="rf-hv21">Mentions légales</a>
       <a href="#confidentialite" data-action="openPrivacy" style="font-size: 0.9rem; color: rgba(245,241,232,0.82);" class="rf-hv22">Politique de confidentialité</a>
+      <a href="#cookies" data-action="manageCookies" style="font-size: 0.9rem; color: rgba(245,241,232,0.82);" class="rf-hv22b">Gérer les cookies</a>
     </nav>
     <div style="display: grid; gap: 16px; justify-items: start;">
       <div style="display: flex; gap: 12px;">
@@ -824,7 +843,9 @@ sc-if.rf-open{display:contents}
       <button type="button" data-action="closeModal" aria-label="Fermer" style="position: absolute; top: 20px; right: 20px; width: 42px; height: 42px; border-radius: 12px; background: #fff; border: 1px solid rgba(201,168,76,0.5); color: #C9A84C; font-size: 1.4rem; line-height: 1; cursor: pointer;">×</button>
       <h2 style="font-size: 1.9rem; font-weight: 800; color: #0F1E3D; margin: 0 0 28px; letter-spacing: -0.02em;">Politique de confidentialité</h2>
       <h3 style="font-size: 1.02rem; font-weight: 800; color: #0F1E3D; margin: 26px 0 10px;">Principe général</h3>
-      <p style="font-size: 0.96rem; line-height: 1.75; color: #3C3C3C; margin: 0;">Ce site est un site vitrine. Il ne comporte aucun formulaire de contact et ne collecte directement aucune donnée personnelle. Aucun cookie de mesure d'audience, de publicité ou de traçage n'est déposé sur votre navigateur lors de votre visite.</p>
+      <p style="font-size: 0.96rem; line-height: 1.75; color: #3C3C3C; margin: 0;">Ce site est un site vitrine. Il ne comporte aucun formulaire de contact et ne collecte directement aucune donnée personnelle. Il utilise Google Analytics à des fins de mesure d'audience, uniquement si vous y consentez (voir ci-dessous).</p>
+      <h3 style="font-size: 1.02rem; font-weight: 800; color: #0F1E3D; margin: 30px 0 10px;">Cookies et mesure d'audience</h3>
+      <p style="font-size: 0.96rem; line-height: 1.75; color: #3C3C3C; margin: 0;">À votre première visite, une bannière vous demande votre consentement avant tout dépôt de cookie de mesure d'audience. Si vous acceptez, Google Analytics est activé et collecte des statistiques anonymisées de fréquentation (pages consultées, durée de visite, type d'appareil, provenance géographique approximative, adresse IP anonymisée). Si vous refusez, aucun cookie de cette nature n'est déposé et votre visite n'est pas mesurée. Vous pouvez changer d'avis à tout moment via le lien « Gérer les cookies » en bas de page. Les données collectées par Google Analytics sont traitées par Google LLC, y compris aux États-Unis, dans le cadre des clauses contractuelles types de la Commission européenne. Pour en savoir plus ou vous opposer au suivi Google Analytics sur l'ensemble des sites que vous visitez, vous pouvez installer le <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color: #0F1E3D; text-decoration: underline;">module complémentaire de désactivation de Google Analytics</a>.</p>
       <h3 style="font-size: 1.02rem; font-weight: 800; color: #0F1E3D; margin: 30px 0 10px;">Prise de rendez-vous</h3>
       <p style="font-size: 0.96rem; line-height: 1.75; color: #3C3C3C; margin: 0;">Le bouton de réservation d'audit vous redirige vers zcal, un service tiers de prise de rendez-vous. Si vous choisissez de réserver un créneau, les données que vous saisissez sur cette plateforme (nom, adresse email, et le cas échéant les informations que vous fournissez librement) sont collectées et traitées par zcal selon sa propre politique de confidentialité, que nous vous invitons à consulter. Ces données nous sont transmises dans le seul but de préparer et de tenir l'échange que vous avez réservé.</p>
       <h3 style="font-size: 1.02rem; font-weight: 800; color: #0F1E3D; margin: 30px 0 10px;">Utilisation des données transmises</h3>
@@ -840,6 +861,17 @@ sc-if.rf-open{display:contents}
     </div>
   </div>
 </sc-if>
+
+<!-- ============ BANNIÈRE DE CONSENTEMENT COOKIES ============ -->
+<div id="rf-cookie-banner" role="dialog" aria-label="Consentement cookies" style="display:none; position: fixed; left: 0; right: 0; bottom: 0; z-index: 120; background: #0F1E3D; border-top: 1px solid rgba(201,168,76,0.45); padding: 20px 24px;">
+  <div style="max-width: 1100px; margin: 0 auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+    <p style="margin: 0; font-size: 0.9rem; line-height: 1.6; color: rgba(245,241,232,0.88); max-width: 620px;">Ce site utilise Google Analytics pour mesurer sa fréquentation. Ces cookies ne sont déposés qu'avec votre accord. Vous pouvez changer d'avis à tout moment via « Gérer les cookies » en bas de page.</p>
+    <div style="display: flex; gap: 12px; flex: 0 0 auto;">
+      <button type="button" data-action="cookieRefuse" style="background: none; border: 1px solid rgba(245,241,232,0.4); color: #F5F1E8; font-weight: 600; font-size: 0.9rem; padding: 11px 20px; border-radius: 10px; cursor: pointer;">Refuser</button>
+      <button type="button" data-action="cookieAccept" style="background: linear-gradient(180deg, #C9A84C, #B8963F); border: none; color: #0F1E3D; font-weight: 700; font-size: 0.9rem; padding: 11px 22px; border-radius: 10px; cursor: pointer;">Accepter</button>
+    </div>
+  </div>
+</div>
 <script>
 (function(){
   document.documentElement.lang='fr';
@@ -876,6 +908,28 @@ sc-if.rf-open{display:contents}
   }
   function closeModals(){ close('legal'); close('privacy'); }
 
+  // Consentement cookies (Google Analytics)
+  var CONSENT_KEY = 'rf-cookie-consent';
+  var GA_DISABLE_KEY = 'ga-disable-' + (window.rfGaId || '');
+  var banner = document.getElementById('rf-cookie-banner');
+  function showBanner(){ if(banner) banner.style.display = 'block'; }
+  function hideBanner(){ if(banner) banner.style.display = 'none'; }
+  function applyConsent(value){
+    if(value === 'accepted'){
+      window[GA_DISABLE_KEY] = false;
+      if(window.rfLoadGA) window.rfLoadGA();
+    } else if(value === 'refused'){
+      window[GA_DISABLE_KEY] = true;
+    }
+  }
+  var savedConsent = null;
+  try { savedConsent = localStorage.getItem(CONSENT_KEY); } catch(e){}
+  if(savedConsent === 'accepted' || savedConsent === 'refused'){
+    applyConsent(savedConsent);
+  } else {
+    showBanner();
+  }
+
   // FAQ
   function toggleFaq(btn){
     var item=btn.closest('.rf-faq-item');
@@ -896,6 +950,17 @@ sc-if.rf-open{display:contents}
     else if(a==='openPrivacy'){ e.preventDefault(); close('menu'); open('privacy'); }
     else if(a==='closeModal') closeModals();
     else if(a==='faq') toggleFaq(t);
+    else if(a==='cookieAccept'){
+      try { localStorage.setItem(CONSENT_KEY, 'accepted'); } catch(err){}
+      applyConsent('accepted');
+      hideBanner();
+    }
+    else if(a==='cookieRefuse'){
+      try { localStorage.setItem(CONSENT_KEY, 'refused'); } catch(err){}
+      applyConsent('refused');
+      hideBanner();
+    }
+    else if(a==='manageCookies'){ e.preventDefault(); showBanner(); }
     // stopProp : no-op, closest() empeche deja la fermeture au clic interne
   });
 
