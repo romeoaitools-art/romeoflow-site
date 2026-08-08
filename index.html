@@ -1116,17 +1116,41 @@ sc-if.rf-open{display:contents}
     setStatus("La connexion a \u00e9chou\u00e9. V\u00e9rifiez que votre micro est autoris\u00e9, puis r\u00e9essayez.");
   });
 
+  // Demande l'autorisation du micro AVANT d'ouvrir la connexion.
+  // Sans cela, la premiere tentative echoue : la connexion demarre pendant que
+  // le visiteur repond encore a la boite de dialogue du navigateur.
+  async function demanderMicro() {
+    if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return false;
+    var stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    // On libere le flux de test : Vapi ouvrira le sien, l'autorisation reste acquise.
+    try { stream.getTracks().forEach(function (t) { t.stop(); }); } catch (e) {}
+    return true;
+  }
+
   buttons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
+    btn.addEventListener('click', async function () {
       if (active) { vapi.stop(); return; }
       setBusy(true);
       setLabel('Connexion...');
-      setStatus('Autorisez votre micro si votre navigateur le demande.');
-      Promise.resolve(vapi.start(ASSISTANT)).catch(function () {
+
+      setStatus('Autorisez votre micro pour lui parler.');
+      try {
+        await demanderMicro();
+      } catch (err) {
         setBusy(false);
         setLabel('R\u00e9essayer');
-        setStatus("Impossible de d\u00e9marrer l'appel. V\u00e9rifiez l'autorisation du micro.");
-      });
+        setStatus("Sans acc\u00e8s au micro, la d\u00e9monstration ne peut pas fonctionner. Autorisez-le dans votre navigateur, puis r\u00e9essayez.");
+        return;
+      }
+
+      setStatus('Connexion en cours, un instant...');
+      try {
+        await vapi.start(ASSISTANT);
+      } catch (err) {
+        setBusy(false);
+        setLabel('R\u00e9essayer');
+        setStatus("La connexion a \u00e9chou\u00e9. R\u00e9essayez dans un instant.");
+      }
     });
   });
 })();
